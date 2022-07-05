@@ -8,7 +8,8 @@ const displayMessage = function (message) {
   document.querySelector('.message').textContent = message;
 };
 
-document.querySelector('.check').addEventListener('click', function () {
+document.querySelector('.form').addEventListener('submit', function (event) {
+  event.preventDefault();
   const guess = Number(document.querySelector('.guess').value);
   console.log(guess, typeof guess);
 
